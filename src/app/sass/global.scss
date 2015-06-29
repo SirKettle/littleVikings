@@ -93,12 +93,11 @@ hr {
 @import "./skins/form.scss";
 
 // views
-@import "../views/main/_main.scss";
-@import "../views/detail/_detail.scss";
-@import "../views/about/_about.scss";
-@import "../components/avatar/_avatar.scss";
-@import "../components/projectSummary/_projectSummary.scss";
 @import "../components/header/_header.scss";
 @import "../components/footer/_footer.scss";
 @import "../components/navigation/_navigation.scss";
-@import "../components/tumblrBlogPost/_tumblrBlogPost.scss";
+@import "../views/main/_main.scss";
+@import "../views/about/_about.scss";
+@import "../views/fees/_fees.scss";
+@import "../views/policies/_policies.scss";
+@import "../views/contact/_contact.scss";
