@@ -1,0 +1,28 @@
+
+
+/* TEAM */
+
+Vicky Thirkettle - Copy, art direction and bright ideas                     
+Will Thirkettle - Coding and not such good ideas
+*  Site: http://vickythirkettle.co.uk
+*  Git: https://github.com/SirKettle/littleVikings.git
+*  Twitter: @thirkettle
+*  Location: London, UK.
+
+
+--------------------------------------------------------------------
+
+
+/* SITE */
+
+Live version 0.1
+
+Language: English
+
+Last update: 2015/06/24
+
+Tech: JavaScript, AngularJS, HTML5, CSS(3), Sass, Browserify, Gulp...
+
+APIs: Twitter, Tumblr
+
+Software: Sublime Text 3, Tower/SourceTree, Google Chrome Dev Tools

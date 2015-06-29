@@ -1,0 +1,104 @@
+
+body {
+	font-family: $mainFont;
+	font-weight: $mainFontWeight;
+	color: $mainColor;
+	background: $mainBackgroundColor;
+	overflow-y: scroll;
+}
+
+strong {
+	font-weight: $mainFontWeightStrong;
+}
+
+a {
+	cursor: pointer;
+	color: $linkColor;
+
+	&:hover {
+		color: $highlightColor;
+	}
+}
+
+hr {
+	height: 2px;
+	border-style: solid;
+	border-width: 0 0 1px 0;
+	border-color: white;
+	background: rgba(black, 0.1);
+	margin: $gutterSize 0;
+}
+
+.page-view {
+	font-size: 20px;
+
+	header {
+		position: relative;
+		z-index: 1;
+	}
+
+	// main page content
+	> article {
+		padding: $gutterSize;
+		background: $pageBackgroundColor;
+		line-height: 1.4;
+		text-align: justify;
+		font-size: 17px;
+
+		@media only screen and (min-width: $breakPoint) {
+			// width: 80%;
+			padding: $gutterSizeMid;
+		}
+
+		@media only screen and (min-width: $breakPointWide) {
+			width: 80%;
+			max-width: 1280px;
+			margin: 0 auto;
+			padding: $gutterSizeWide;
+		}
+
+		h2 {
+			font-size: 30px;
+			font-family: $headingFont;
+			font-weight: $headingWeight;
+			margin-bottom: $gutterSize;
+		}
+
+		h3 {
+			font-size: 18px;
+			font-family: $subHeadingFont;
+			font-weight: $subHeadingWeight;
+			margin-bottom: $gutterSize;
+		}
+
+		h4 {
+			font-weight: $mainFontWeightMid;
+		}
+
+		p {
+			margin-bottom: $gutterSize;
+		}
+
+		small {
+			font-size: 70%;
+			font-weight: $smallFontWeight;
+		}
+
+		box-shadow: 0 1px 4px rgba(black, 0.1);
+	}
+}
+
+
+// skins
+@import "./skins/form.scss";
+
+// views
+@import "../views/main/_main.scss";
+@import "../views/detail/_detail.scss";
+@import "../views/about/_about.scss";
+@import "../components/avatar/_avatar.scss";
+@import "../components/projectSummary/_projectSummary.scss";
+@import "../components/header/_header.scss";
+@import "../components/footer/_footer.scss";
+@import "../components/navigation/_navigation.scss";
+@import "../components/tumblrBlogPost/_tumblrBlogPost.scss";
