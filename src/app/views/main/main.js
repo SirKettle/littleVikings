@@ -47,6 +47,7 @@ module.exports = angular.module('myApp.views.main', [
 		return ReferenceService.getAll(params)
 			.then(function (references) {
 				$scope.references = references;
+				console.log(references);
 			})
 			.catch(function (err) {
 				console.warn('getReferences error', params, err);

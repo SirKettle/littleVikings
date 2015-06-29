@@ -4,7 +4,7 @@
 var angular = require('angular');
 var clientStorage = require('./clientStorage');
 var initMockData = {
-	// references: require('../data/references.json')
+	reference: require('../data/references.json')
 };
 
 module.exports = angular.module('services.mockDataHandler', [

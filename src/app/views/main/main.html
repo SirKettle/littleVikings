@@ -14,14 +14,17 @@
 		<hr>
 
 		<h2>Some references</h2>
-		<!-- <ul class="my-references">
-			<li ng:repeat="reference in references">
-				<my:reference-summary
+		<ul class="my-references">
+			<li ng:repeat="reference in references | orderBy: 'year'">
+				<small>{{ reference.year }}</small>
+				<p>{{ reference.testimonial.author }}</p>
+
+				<!-- <my:reference-summary
 					data-model="reference"
-				></my:reference-summary>
+				></my:reference-summary> -->
 				<hr>
 			</li>
-		</ul> -->
+		</ul>
 	</article>
 	<my:footer></my:footer>
 </div>
