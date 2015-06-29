@@ -10,7 +10,7 @@ module.exports = angular.module('myApp.services.navigationService', [
 		getMainNavItems: function () {
 			return [
 				{
-					title: 'Projects',
+					title: 'Home',
 					url: '/#/',
 					path: '/'
 				},
