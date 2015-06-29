@@ -16,11 +16,6 @@ module.exports = angular.module('myApp.services.socialNetworksService', [
 					id: 'facebook',
 					name: 'Facebook',
 					url: 'https://facebook.com'
-				},
-				{
-					id: 'tumblr',
-					name: 'Tumblr',
-					url: 'https://www.tumblr.com'
 				}
 			];
 			
