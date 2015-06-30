@@ -7,7 +7,7 @@
 			"fullHtml" : "<p>Seriously, she is really great!</p>",
 			"author" : "Sandra D"
 		},
-		"referenceImageUrl" : "/images/favicon.png"
+		"referenceImageUrl" : "/images/reference/sandra.jpg"
 	},
 	{
 		"id" : "harrison",
@@ -17,7 +17,7 @@
 			"fullHtml" : "<p>Seriously, she is really great!</p>",
 			"author" : "Rachele H"
 		},
-		"referenceImageUrl" : "/images/favicon.png"
+		"referenceImageUrl" : "/images/reference/rachele.jpg"
 	},
 	{
 		"id" : "clements",
@@ -27,7 +27,7 @@
 			"fullHtml" : "<p>Seriously, she is really great!</p>",
 			"author" : "Tanya C"
 		},
-		"referenceImageUrl" : "/images/favicon.png"
+		"referenceImageUrl" : "/images/reference/tanya.jpg"
 	},
 	{
 		"id" : "tuckey",
@@ -37,7 +37,7 @@
 			"fullHtml" : "<p>Seriously, she is really great!</p>",
 			"author" : "Kate T"
 		},
-		"referenceImageUrl" : "/images/favicon.png"
+		"referenceImageUrl" : "/images/reference/kate.jpg"
 	},
 	{
 		"id" : "wright",
@@ -47,7 +47,7 @@
 			"fullHtml" : "<p>Seriously, she is really great!</p>",
 			"author" : "Joy W"
 		},
-		"referenceImageUrl" : "/images/favicon.png"
+		"referenceImageUrl" : "/images/reference/joy.jpg"
 	},
 	{
 		"id" : "pedder",
@@ -57,7 +57,7 @@
 			"fullHtml" : "<p>Seriously, she is really great!</p>",
 			"author" : "Alice P"
 		},
-		"referenceImageUrl" : "/images/favicon.png"
+		"referenceImageUrl" : "/images/reference/alice.jpg"
 	},
 	{
 		"id" : "ripley",
@@ -67,7 +67,7 @@
 			"fullHtml" : "<p>Seriously, she is really great!</p>",
 			"author" : "Fay R"
 		},
-		"referenceImageUrl" : "/images/favicon.png"
+		"referenceImageUrl" : "/images/reference/fay.jpg"
 	},
 	{
 		"id" : "simpson",
@@ -77,6 +77,6 @@
 			"fullHtml" : "<p>Seriously, she is really great!</p>",
 			"author" : "Catherine S"
 		},
-		"referenceImageUrl" : "/images/favicon.png"
+		"referenceImageUrl" : "/images/reference/catherine.jpg"
 	}
 ]
