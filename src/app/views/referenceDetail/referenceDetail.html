@@ -1,0 +1,13 @@
+<div class="view-reference-detail page-view">
+
+	<my:header></my:header>
+
+	<article>
+
+		<h2>{{ ReferenceDetail.model.year }}</h2>
+		<div ng:bind-html="ReferenceDetail.getTestimonialHtml()"></div>
+		<p><small>{{ ReferenceDetail.model.testimonial.author }}</small></p>
+		<img ng:src="{{ ReferenceDetail.model.referenceImageUrl }}" width="100%">
+	</article>
+	<my:footer></my:footer>
+</div>

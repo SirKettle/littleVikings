@@ -3,8 +3,9 @@
 		"id" : "davis",
 		"year" : "2002",
 		"testimonial" : {
-			"html" : "<p>She's great!</p>",
-			"author" : "Sandra"
+			"quoteHtml" : "<p>She's great!</p>",
+			"fullHtml" : "<p>Seriously, she is really great!</p>",
+			"author" : "Sandra D"
 		},
 		"referenceImageUrl" : "/images/favicon.png"
 	},
@@ -12,8 +13,9 @@
 		"id" : "harrison",
 		"year" : "2000",
 		"testimonial" : {
-			"html" : "<p>She's great!</p>",
-			"author" : "Rachele"
+			"quoteHtml" : "<p>She's great!</p>",
+			"fullHtml" : "<p>Seriously, she is really great!</p>",
+			"author" : "Rachele H"
 		},
 		"referenceImageUrl" : "/images/favicon.png"
 	},
@@ -21,8 +23,9 @@
 		"id" : "clements",
 		"year" : "2008",
 		"testimonial" : {
-			"html" : "<p>She's great!</p>",
-			"author" : "Tanya"
+			"quoteHtml" : "<p>She's great!</p>",
+			"fullHtml" : "<p>Seriously, she is really great!</p>",
+			"author" : "Tanya C"
 		},
 		"referenceImageUrl" : "/images/favicon.png"
 	},
@@ -30,8 +33,9 @@
 		"id" : "tuckey",
 		"year" : "2003",
 		"testimonial" : {
-			"html" : "<p>She's great!</p>",
-			"author" : "Kate"
+			"quoteHtml" : "<p>She's great!</p>",
+			"fullHtml" : "<p>Seriously, she is really great!</p>",
+			"author" : "Kate T"
 		},
 		"referenceImageUrl" : "/images/favicon.png"
 	},
@@ -39,8 +43,9 @@
 		"id" : "wright",
 		"year" : "1999",
 		"testimonial" : {
-			"html" : "<p>She's great!</p>",
-			"author" : "Joy"
+			"quoteHtml" : "<p>She's great!</p>",
+			"fullHtml" : "<p>Seriously, she is really great!</p>",
+			"author" : "Joy W"
 		},
 		"referenceImageUrl" : "/images/favicon.png"
 	},
@@ -48,8 +53,9 @@
 		"id" : "pedder",
 		"year" : "2013",
 		"testimonial" : {
-			"html" : "<p>She's great!</p>",
-			"author" : "Alice"
+			"quoteHtml" : "<p>She's great!</p>",
+			"fullHtml" : "<p>Seriously, she is really great!</p>",
+			"author" : "Alice P"
 		},
 		"referenceImageUrl" : "/images/favicon.png"
 	},
@@ -57,8 +63,9 @@
 		"id" : "ripley",
 		"year" : "2008",
 		"testimonial" : {
-			"html" : "<p>She's great!</p>",
-			"author" : "Fay"
+			"quoteHtml" : "<p>She's great!</p>",
+			"fullHtml" : "<p>Seriously, she is really great!</p>",
+			"author" : "Fay R"
 		},
 		"referenceImageUrl" : "/images/favicon.png"
 	},
@@ -66,8 +73,9 @@
 		"id" : "simpson",
 		"year" : "2005",
 		"testimonial" : {
-			"html" : "<p>She's great!</p>",
-			"author" : "Catherine"
+			"quoteHtml" : "<p>She's great!</p>",
+			"fullHtml" : "<p>Seriously, she is really great!</p>",
+			"author" : "Catherine S"
 		},
 		"referenceImageUrl" : "/images/favicon.png"
 	}

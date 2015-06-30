@@ -13,6 +13,7 @@ var viewAbout = require('./views/about/about');
 var viewFees = require('./views/fees/fees');
 var viewPolicies = require('./views/policies/policies');
 var viewContact = require('./views/contact/contact');
+var viewReferenceDetail = require('./views/referenceDetail/referenceDetail');
 
 angularRoute;
 
@@ -25,6 +26,7 @@ angular.module('myApp', [
 	viewFees.name,
 	viewPolicies.name,
 	viewContact.name,
+	viewReferenceDetail.name,
 	'ngRoute'
 ])
 .config(function (
@@ -37,11 +39,11 @@ angular.module('myApp', [
 		.when('/fees', { template: '<my:view-fees></my:view-fees>' })
 		.when('/policies', { template: '<my:view-policies></my:view-policies>' })
 		.when('/contact', { template: '<my:view-contact></my:view-contact>' })
-		// .when('/project/:key', {
-		// 	template: function (params) {
-		// 		return '<my:view-detail data-key="' + params.key + '"></my:view-detail>';
-		// 	}
-		// })
+		.when('/reference/:key', {
+			template: function (params) {
+				return '<my:view-reference-detail data-key="' + params.key + '"></my:view-reference-detail>';
+			}
+		})
 		.otherwise({ redirectTo: '/' });
 
 	// decorate the $q service with 'allSettled' which unlike 'all' resolves if a promise fails

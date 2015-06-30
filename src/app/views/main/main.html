@@ -16,12 +16,9 @@
 		<h2>Some references</h2>
 		<ul class="my-references">
 			<li ng:repeat="reference in references | orderBy: 'year'">
-				<small>{{ reference.year }}</small>
-				<p>{{ reference.testimonial.author }}</p>
-
-				<!-- <my:reference-summary
+				<my:reference-quote
 					data-model="reference"
-				></my:reference-summary> -->
+				></my:reference-quote>
 				<hr>
 			</li>
 		</ul>
