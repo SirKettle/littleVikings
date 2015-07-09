@@ -3,6 +3,10 @@
 	color: $headerColor;
 	background: $headerBackgroundColor;
 
+
+	background-image: url('/images/owls.png');
+	background-position: left bottom;
+
 	> header {
 		padding: $gutterSize;
 

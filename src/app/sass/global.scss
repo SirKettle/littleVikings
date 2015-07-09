@@ -4,6 +4,8 @@ body {
 	font-weight: $mainFontWeight;
 	color: $mainColor;
 	background: $mainBackgroundColor;
+	background: $mainBackgroundColor url('/images/owls.png') repeat;
+	background-position: left -31px;
 	overflow-y: scroll;
 }
 

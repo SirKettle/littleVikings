@@ -3,7 +3,7 @@
 		"id" : "davis",
 		"year" : "2002",
 		"testimonial" : {
-			"quoteHtml" : "<p>She has looked after the children with love which is reciprocated... the children have continued to develop with confidence...</p>",
+			"quoteHtml" : "She has looked after the children with love which is reciprocated... the children have continued to develop with confidence...",
 			"author" : "Sandra D"
 		},
 		"referenceImageUrl" : "/images/reference/sandra.jpg"
@@ -12,7 +12,7 @@
 		"id" : "harrison",
 		"year" : "2000",
 		"testimonial" : {
-			"quoteHtml" : "<p>She has become a friend of the family and I would highly recommend her to anyone who would be lucky enough to meet and choose her.</p>",
+			"quoteHtml" : "She has become a friend of the family and I would highly recommend her to anyone who would be lucky enough to meet and choose her.",
 			"author" : "Rachele H"
 		},
 		"referenceImageUrl" : "/images/reference/rachele.jpg"
@@ -21,7 +21,7 @@
 		"id" : "clements",
 		"year" : "2008",
 		"testimonial" : {
-			"quoteHtml" : "<p>Vicky is natural, warm and loving... ...providing healthy home-cooked meals... She understands the individual needs of my sons...</p>",
+			"quoteHtml" : "Vicky is natural, warm and loving... ...providing healthy home-cooked meals... She understands the individual needs of my sons...",
 			"author" : "Tanya C"
 		},
 		"referenceImageUrl" : "/images/reference/tanya.jpg"
@@ -30,7 +30,7 @@
 		"id" : "tuckey",
 		"year" : "2003",
 		"testimonial" : {
-			"quoteHtml" : "<p>...with Vicky, Ruby became gradually but very noticeably more confident and happy as a child.</p>",
+			"quoteHtml" : "...with Vicky, Ruby became gradually but very noticeably more confident and happy as a child.",
 			"author" : "Kate T"
 		},
 		"referenceImageUrl" : "/images/reference/kate.jpg"
@@ -39,7 +39,7 @@
 		"id" : "wright",
 		"year" : "1999",
 		"testimonial" : {
-			"quoteHtml" : "<p>Vicky is a very confident and capable nanny.  She is a trustworthy person who put the most she possibly could into her job.</p>",
+			"quoteHtml" : "Vicky is a very confident and capable nanny.  She is a trustworthy person who put the most she possibly could into her job.",
 			"author" : "Joy W"
 		},
 		"referenceImageUrl" : "/images/reference/joy.jpg"
@@ -48,7 +48,7 @@
 		"id" : "pedder",
 		"year" : "2013",
 		"testimonial" : {
-			"quoteHtml" : "<p>She is not just brilliant with children but also very empathetic to us as parents.</p>",
+			"quoteHtml" : "She is not just brilliant with children but also very empathetic to us as parents.",
 			"author" : "Alice P"
 		},
 		"referenceImageUrl" : "/images/reference/alice.jpg"
@@ -57,7 +57,7 @@
 		"id" : "ripley",
 		"year" : "2008",
 		"testimonial" : {
-			"quoteHtml" : "<p>She has been without doubt an exceptional nanny. I would re-employ her at the drop of a hat.</p>",
+			"quoteHtml" : "She has been without doubt an exceptional nanny. I would re-employ her at the drop of a hat.",
 			"author" : "Fay R"
 		},
 		"referenceImageUrl" : "/images/reference/fay.jpg"
@@ -66,7 +66,7 @@
 		"id" : "simpson",
 		"year" : "2005",
 		"testimonial" : {
-			"quoteHtml" : "<p>Vicky is an excellent nanny who has consistently looked after the children with great care and love.</p>",
+			"quoteHtml" : "Vicky is an excellent nanny who has consistently looked after the children with great care and love.",
 			"author" : "Catherine S"
 		},
 		"referenceImageUrl" : "/images/reference/catherine.jpg"

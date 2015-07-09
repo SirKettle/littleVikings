@@ -5,8 +5,9 @@
 	<article>
 
 		<h2>{{ ReferenceDetail.model.year }}</h2>
-		<div ng:bind-html="ReferenceDetail.getTestimonialHtml()"></div>
+		<h3 ng:bind-html="ReferenceDetail.getTestimonialHtml()"></h3>
 		<p><small>{{ ReferenceDetail.model.testimonial.author }}</small></p>
+		<p>Contact details available on request...</p>
 		<img ng:src="{{ ReferenceDetail.model.referenceImageUrl }}">
 	</article>
 	<my:footer></my:footer>
