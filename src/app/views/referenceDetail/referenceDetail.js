@@ -43,7 +43,7 @@ module.exports = angular.module('myApp.views.referenceDetail', [
 			return null;
 		}
 
-		return $sce.trustAsHtml(testimonial.fullHtml);
+		return $sce.trustAsHtml(testimonial.quoteHtml);
 	};
 
 	ReferenceDetail.getDetails = function (id) {

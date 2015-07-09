@@ -30,7 +30,7 @@ module.exports = angular.module('myApp.views.main', [
 	return {
 		restrict: 'E',
 		template: template,
-		controller: 'MyViewMainCtrl',
+		controller: 'MyViewMainCtrl as Main',
 		replace: true,
 		scope: {
 		},
@@ -43,16 +43,19 @@ module.exports = angular.module('myApp.views.main', [
 	$scope,
 	ReferenceService
 ) {
-	var self = this;
+	var Main = this;
 
-	this.getReferences = function (params) {
+	Main.getReferences = function (params) {
 		return ReferenceService.getAll(params)
 			.then(function (references) {
-				$scope.references = references;
+				Main.references = references;
 				console.log(references);
 			})
 			.catch(function (err) {
 				console.warn('getReferences error', params, err);
 			});
 	};
+
+	Main.referenceSortBy = 'year';
+	Main.referenceSortReversed = true;
 });

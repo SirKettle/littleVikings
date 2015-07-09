@@ -15,7 +15,7 @@
 
 		<h2>Some references</h2>
 		<ul class="my-references">
-			<li ng:repeat="reference in references | orderBy: 'year'">
+			<li ng:repeat="reference in Main.references | orderBy:Main.referenceSortBy:Main.referenceSortReversed">
 				<my:reference-quote
 					data-model="reference"
 				></my:reference-quote>
