@@ -1,4 +1,5 @@
-<div class="my-reference-quote">
+<div class="my-reference-quote"
+	ng:click="_onLinkClicked()">
 	<h3 ng:bind-html="_getQuoteHtml()"></h3>
-	<p><a ng:click="_onLinkClicked()"><small>{{ model.year }} - {{ model.testimonial.author }}. Read full reference</small></a></p>
+	<p><a>{{ model.year }} - {{ model.testimonial.author }}. Read full reference</a></p>
 </div>

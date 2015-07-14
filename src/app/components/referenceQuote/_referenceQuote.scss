@@ -1,16 +1,43 @@
 
 .my-reference-quote {
 	position: relative;
+	cursor: pointer;
 
 	&:after {
 		position: absolute;
-		content: '"';
-		top: 30px;
+		content: '';
+		top: 0;
 		right: 0;
-		color: rgba(black, 0.1);
-		font-size: 200px;
-		font-family: georgia;
+		bottom: 0;
+		width: 100px;
+		opacity: 0.05;
+		background-image: url('/images/quotes.png');
+		background-position: right bottom;
 	}
+
+
+	&:before {
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 100px;
+		opacity: 0.05;
+		background-image: url('/images/quotes.png');
+		background-position: left top;
+		-webkit-transform: rotate(0.5turn);
+		transform: rotate(0.5turn);
+	}
+
+	&:hover {
+		color: $highlightColor;
+
+		&:after, &:before {
+			opacity: 0.1;
+		}
+	}
+
 
 	// border: solid 1px red;
 }
