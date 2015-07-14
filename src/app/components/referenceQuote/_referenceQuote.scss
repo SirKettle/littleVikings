@@ -1,4 +1,16 @@
 
 .my-reference-quote {
-	
+	position: relative;
+
+	&:after {
+		position: absolute;
+		content: '"';
+		top: 30px;
+		right: 0;
+		color: rgba(black, 0.1);
+		font-size: 200px;
+		font-family: georgia;
+	}
+
+	// border: solid 1px red;
 }

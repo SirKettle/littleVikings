@@ -25,7 +25,7 @@ module.exports = angular.module('myApp.views.contact', [
 	return {
 		restrict: 'E',
 		template: template,
-		controller: 'MyViewContactCtrl',
+		controller: 'MyViewContactCtrl as Contact',
 		replace: true,
 		scope: {
 		},
@@ -35,5 +35,9 @@ module.exports = angular.module('myApp.views.contact', [
 })
 .controller('MyViewContactCtrl', function (
 ) {
+	var Contact = this;
 
+	Contact.name = 'Vicky';
+	Contact.email = 'vickyl24@aol.com';
+	Contact.telephone = '07886 035 561';
 });
