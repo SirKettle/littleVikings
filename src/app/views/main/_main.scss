@@ -4,9 +4,12 @@
 
 	> article .my-social-networks {
 
-		text-align: center;
+		// text-align: center;
+
+		float: right;
 		margin-top: $gutterSize;
 		margin-bottom: $gutterSize;
+		margin-left: $gutterSize;
 
 		@media only screen and (min-width: $breakPointSocialLinks) {
 			display: none;

@@ -15,7 +15,7 @@ module.exports = angular.module('myApp.services.contactService', [
 				{
 					id: 'facebook',
 					name: 'Facebook',
-					url: 'https://facebook.com'
+					url: 'https://www.facebook.com/vicky.thirkettle'
 				}
 			];
 			

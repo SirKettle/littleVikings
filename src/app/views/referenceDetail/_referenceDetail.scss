@@ -3,6 +3,37 @@
 .view-reference-detail {
 
 	> article {
+		position: relative;
+
+		&:after {
+			position: absolute;
+			content: '';
+			top: 0;
+			right: 0;
+			bottom: 0;
+			width: 100px;
+			opacity: 0.05;
+			background-image: url('/images/quotes.png');
+			background-position: right 100px;
+			background-repeat: no-repeat;
+		}
+
+
+		&:before {
+			position: absolute;
+			content: '';
+			top: 0;
+			left: 0;
+			bottom: 0;
+			width: 100px;
+			opacity: 0.05;
+			background-image: url('/images/quotes.png');
+			background-position: left bottom;
+			-webkit-transform: rotate(0.5turn);
+			transform: rotate(0.5turn);
+			background-repeat: no-repeat;
+		}
+
 		img {
 			width: 100%;
 			margin: 20px 0;

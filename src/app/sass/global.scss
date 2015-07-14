@@ -41,15 +41,36 @@ hr {
 
 	// main page content
 	> article {
+		@extend %clearfix;
 		padding: $gutterSize;
 		background: $pageBackgroundColor;
 		line-height: 1.4;
-		text-align: justify;
 		font-size: 17px;
+
+		img.piccy {
+			width: 100%;
+			margin-bottom: $gutterSize;
+		}
 
 		@media only screen and (min-width: $breakPoint) {
 			// width: 80%;
 			padding: $gutterSizeMid;
+
+			img.piccy {
+				width: auto;
+
+				&.-right {
+					max-width: 66%;
+					float: right;
+					margin-left: $gutterSize;
+				}
+
+				&.-left {
+					max-width: 66%;
+					float: left;
+					margin-right: $gutterSize;
+				}
+			}
 		}
 
 		@media only screen and (min-width: $breakPointWide) {
@@ -71,14 +92,18 @@ hr {
 			font-family: $subHeadingFont;
 			font-weight: $subHeadingWeight;
 			margin-bottom: $gutterSize;
+			text-align: justify;
 		}
 
 		h4 {
 			font-weight: $mainFontWeightMid;
+			margin-bottom: $gutterSize;
+			text-align: justify;
 		}
 
 		p {
 			margin-bottom: $gutterSize;
+			text-align: justify;
 		}
 
 		small {
