@@ -7,7 +7,6 @@ var referenceService = require('../../services/referenceService');
 // sub components
 var headerComponent = require('../../components/header/header');
 var footerComponent = require('../../components/footer/footer');
-var socialNetworksComponent = require('../../components/socialNetworks/socialNetworks');
 var referenceQuoteComponent = require('../../components/referenceQuote/referenceQuote');
 
 
@@ -22,7 +21,6 @@ module.exports = angular.module('myApp.views.main', [
 	referenceService.name,
 	headerComponent.name,
 	footerComponent.name,
-	socialNetworksComponent.name,
 	referenceQuoteComponent.name
 ])
 .directive('myViewMain', function (

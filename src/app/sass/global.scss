@@ -52,25 +52,42 @@ hr {
 			margin-bottom: $gutterSize;
 		}
 
+		> column {
+
+		}
+
 		@media only screen and (min-width: $breakPoint) {
 			// width: 80%;
 			padding: $gutterSizeMid;
 
-			img.piccy {
-				width: auto;
-
-				&.-right {
-					max-width: 66%;
-					float: right;
-					margin-left: $gutterSize;
-				}
+			> column {
+				width: 50%;
+				float: left;
 
 				&.-left {
-					max-width: 66%;
-					float: left;
-					margin-right: $gutterSize;
+					padding-right: $gutterSizeMid * 0.5;
+				}
+
+				&.-right {
+					padding-left: $gutterSizeMid * 0.5;
 				}
 			}
+
+			// img.piccy {
+			// 	width: auto;
+
+			// 	&.-right {
+			// 		max-width: 66%;
+			// 		float: right;
+			// 		margin-left: $gutterSize;
+			// 	}
+
+			// 	&.-left {
+			// 		max-width: 66%;
+			// 		float: left;
+			// 		margin-right: $gutterSize;
+			// 	}
+			// }
 		}
 
 		@media only screen and (min-width: $breakPointWide) {
