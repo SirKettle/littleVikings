@@ -5,6 +5,7 @@
 
 
 	background-image: url('/images/owls.png');
+	background-image: url('/images/wallpaper.png');
 	background-position: left bottom;
 
 	> header {
@@ -32,9 +33,23 @@
 					font-weight: $headerWeight;
 					color: $headerColor;
 					display: block;
-					margin-bottom: 5px;
+					// margin-bottom: 5px;
+					font-size: 0;
+				}
+				font-size: 0;
+				background-image: url('/images/web-logo-dark-bg.png');
+				background-position: left center;
+				background-size: contain;
+				width: 300px;
+				height: 160px;
+
+				@media only screen and (min-width: $breakPointSocialLinks) {
+					width: 398px;
+					height: 209px;
 				}
 			}
+
+			// width: 398px;
 
 		}
 

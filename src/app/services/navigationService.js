@@ -14,21 +14,21 @@ module.exports = angular.module('myApp.services.navigationService', [
 					url: '/#/',
 					path: '/'
 				},
-				{
-					title: 'About',
-					url: '/#/about',
-					path: '/about'
-				},
-				{
-					title: 'Fees',
-					url: '/#/fees',
-					path: '/fees'
-				},
-				{
-					title: 'Policies',
-					url: '/#/policies',
-					path: '/policies'
-				},
+				// {
+				// 	title: 'About',
+				// 	url: '/#/about',
+				// 	path: '/about'
+				// },
+				// {
+				// 	title: 'Fees',
+				// 	url: '/#/fees',
+				// 	path: '/fees'
+				// },
+				// {
+				// 	title: 'Policies',
+				// 	url: '/#/policies',
+				// 	path: '/policies'
+				// },
 				{
 					title: 'Contact',
 					url: '/#/contact',

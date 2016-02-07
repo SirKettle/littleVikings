@@ -15,7 +15,7 @@ Will Thirkettle - Coding and not such good ideas
 
 /* SITE */
 
-Live version 0.1
+Live version 1.0
 
 Language: English
 
