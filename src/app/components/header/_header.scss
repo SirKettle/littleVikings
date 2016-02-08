@@ -141,8 +141,8 @@
 		}
 
 		@media only screen and (min-width: $breakPointWide) {
-			width: 80%;
-			max-width: 1280px;
+			width: $dimensionsWideContentPercentage;
+			max-width: $dimensionsMaxContentWidth;
 			margin: 0 auto;
 			padding: $gutterSizeMid $gutterSizeWide;
 			

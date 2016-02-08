@@ -37,9 +37,9 @@ module.exports = angular.module('myApp.views.policyDetail', [
 	var PolicyDetail = this;
 
 	PolicyDetail.getHtml = function () {
-		return PolicyDetail.html && $sce.trustAsHtml(PolicyDetail.html);
+		return PolicyDetail.data && $sce.trustAsHtml(PolicyDetail.data.html);
 	};
 
 	PolicyDetail.key = $routeParams.key;
-	PolicyDetail.html = PolicyService.getHtml(PolicyDetail.key);
+	PolicyDetail.data = PolicyService.getPolicy(PolicyDetail.key);
 });

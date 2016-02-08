@@ -2,7 +2,9 @@
 
 	<my:header></my:header>
 
-	<article ng:bind-html="PolicyDetail.getHtml()">
+	<article>
+		<h2>{{ PolicyDetail.data.title }}</h2>
+		<div ng:bind-html="PolicyDetail.getHtml()"></div>
 	</article>
 	<my:footer></my:footer>
 </div>
