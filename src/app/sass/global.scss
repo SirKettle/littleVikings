@@ -125,6 +125,11 @@ hr {
 			text-align: justify;
 		}
 
+		li {
+			margin-bottom: $gutterSize;
+			list-style: square inside;
+		}
+
 		small {
 			font-size: 70%;
 			font-weight: $smallFontWeight;

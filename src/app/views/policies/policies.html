@@ -4,6 +4,11 @@
 
 	<article>
 		<h2>Policies...</h2>
+		<ul>
+			<li ng:repeat="policy in policies">
+				<a ng:click="_onLinkClicked(policy)">{{ policy.title }}</a>
+			</li>
+		</ul>
 	</article>
 	<my:footer></my:footer>
 </div>

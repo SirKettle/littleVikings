@@ -24,11 +24,11 @@ module.exports = angular.module('myApp.services.navigationService', [
 				// 	url: '/#/fees',
 				// 	path: '/fees'
 				// },
-				// {
-				// 	title: 'Policies',
-				// 	url: '/#/policies',
-				// 	path: '/policies'
-				// },
+				{
+					title: 'Policies',
+					url: '/#/policies',
+					path: '/policies'
+				},
 				{
 					title: 'Contact',
 					url: '/#/contact',

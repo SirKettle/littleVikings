@@ -12,6 +12,7 @@ var viewMain = require('./views/main/main');
 var viewAbout = require('./views/about/about');
 var viewFees = require('./views/fees/fees');
 var viewPolicies = require('./views/policies/policies');
+var viewPolicyDetail = require('./views/policyDetail/policyDetail');
 var viewContact = require('./views/contact/contact');
 var viewReferenceDetail = require('./views/referenceDetail/referenceDetail');
 
@@ -25,6 +26,7 @@ angular.module('myApp', [
 	viewAbout.name,
 	viewFees.name,
 	viewPolicies.name,
+	viewPolicyDetail.name,
 	viewContact.name,
 	viewReferenceDetail.name,
 	'ngRoute'
@@ -38,6 +40,11 @@ angular.module('myApp', [
 		.when('/about', { template: '<my:view-about></my:view-about>' })
 		.when('/fees', { template: '<my:view-fees></my:view-fees>' })
 		.when('/policies', { template: '<my:view-policies></my:view-policies>' })
+		.when('/policies/:key', {
+			template: function (params) {
+				return '<my:view-policy-detail data-key="' + params.key + '"></my:view-policy-detail>';
+			}
+		})
 		.when('/contact', { template: '<my:view-contact></my:view-contact>' })
 		.when('/reference/:key', {
 			template: function (params) {
