@@ -3,7 +3,11 @@
 	<my:header></my:header>
 
 	<article>
-		<p><a ng:click="ReferenceDetail.onNextClicked()">Next reference</a></p>
+		<ul class="pagination_links">
+			<li>{{ ReferenceDetail.model.info.index + 1 }} of {{ ReferenceDetail.model.info.totalCount }}</li>
+			<li><a ng:click="ReferenceDetail.onPreviousClicked()">Previous</a></li>
+			<li><a ng:click="ReferenceDetail.onNextClicked()">Next</a></li>
+		</ul>
 		<h2>{{ ReferenceDetail.model.year }}</h2>
 		<h3 ng:bind-html="ReferenceDetail.getTestimonialHtml()"></h3>
 		<h4>{{ ReferenceDetail.model.testimonial.author }}</h4>

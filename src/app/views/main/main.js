@@ -64,17 +64,14 @@ module.exports = angular.module('myApp.views.main', [
 ) {
 	var Main = this;
 
-	Main.getReferences = function (params) {
-		return ReferenceService.getAll(params)
+	Main.getReferences = function () {
+		return ReferenceService.getAll()
 			.then(function (references) {
 				Main.references = references;
 				console.log(references);
 			})
 			.catch(function (err) {
-				console.warn('getReferences error', params, err);
+				console.warn('getReferences error', err);
 			});
 	};
-
-	Main.referenceSortBy = 'year';
-	Main.referenceSortReversed = true;
 });

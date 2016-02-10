@@ -29,6 +29,7 @@ module.exports = angular.module('myApp.views.policyDetail', [
 	};
 })
 .controller('MyViewPolicyDetailCtrl', function (
+	$location,
 	$sce,
 	$scope,
 	$routeParams,
@@ -40,6 +41,17 @@ module.exports = angular.module('myApp.views.policyDetail', [
 		return PolicyDetail.data && $sce.trustAsHtml(PolicyDetail.data.html);
 	};
 
+
+	PolicyDetail.onPreviousClicked = function () {
+		$location.path('policies/' + PolicyDetail.previous.key);
+	};
+
+	PolicyDetail.onNextClicked = function () {
+		$location.path('policies/' + PolicyDetail.next.key);
+	};
+
 	PolicyDetail.key = $routeParams.key;
 	PolicyDetail.data = PolicyService.getPolicy(PolicyDetail.key);
+	PolicyDetail.previous = PolicyService.getPrevious(PolicyDetail.key);
+	PolicyDetail.next = PolicyService.getNext(PolicyDetail.key);
 });

@@ -15,7 +15,7 @@
 		<column class="-right">
 			<h2>What others have said...</h2>
 			<ul class="my-references">
-				<li ng:repeat="reference in Main.references | orderBy:Main.referenceSortBy:Main.referenceSortReversed">
+				<li ng:repeat="reference in Main.references">
 					<my:reference-quote
 						data-model="reference"
 					></my:reference-quote>

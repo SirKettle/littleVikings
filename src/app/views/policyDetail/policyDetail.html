@@ -3,6 +3,11 @@
 	<my:header></my:header>
 
 	<article>
+		<ul class="pagination_links">
+			<li>{{ PolicyDetail.data.info.index + 1 }} of {{ PolicyDetail.data.info.totalCount }}</li>
+			<li><a ng:click="PolicyDetail.onPreviousClicked()">Previous</a></li>
+			<li><a ng:click="PolicyDetail.onNextClicked()">Next</a></li>
+		</ul>
 		<h2>{{ PolicyDetail.data.title }}</h2>
 		<div ng:bind-html="PolicyDetail.getHtml()"></div>
 	</article>

@@ -56,6 +56,16 @@ hr {
 		> column {
 
 		}
+		
+		.pagination_links {
+			float: right;
+			
+			li {
+				list-style: none;
+				float: left;
+				margin-left: $gutterSize;
+			}
+		}
 
 		@media only screen and (min-width: $breakPoint) {
 			// width: 80%;

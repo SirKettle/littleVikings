@@ -2,6 +2,7 @@
 
 var angular = require('angular');
 var dataService = require('./dataService');
+var utils = require('./utils');
 
 module.exports = angular.module('myApp.services.referenceService', [
 	dataService.name
@@ -11,42 +12,138 @@ module.exports = angular.module('myApp.services.referenceService', [
 	$rootScope,
 	DataService
 ) {
+	function ReferenceService () {
 
-	var mURL = DataService.apiRoot() + 'reference';
+		var mURL = DataService.apiRoot() + 'reference';
+		var mCache = {
+			get: {}
+		};
+		var self = this;
 
-	var _validateResponse = function (deferred, data, method) {
-		// validation
-		if (angular.isObject(data)) {
-			DataService.resolve(deferred, data);
+		function _validateResponse (deferred, data, method) {
+			// validation
+			if (angular.isObject(data)) {
+				DataService.resolve(deferred, data);
+			}
+			else {
+				DataService.reject(deferred, {
+					message: 'invalid data',
+					data: data
+				});
+			}
 		}
-		else {
-			DataService.reject(deferred, {
-				message: 'invalid data',
-				data: data
-			});
-		}
-	};
 
-	return {
-		get: function (key) {
+		function _defaultReferenceSort (a, b) {
+			if (a.year === b.year) {
+				return 0;
+			}
+
+			if (a.year > b.year) {
+				return -1;
+			}
+
+			return 1;
+		}
+
+		function _getReferenceIndex (references, reference) {
+			var referenceIndex;
+
+			references.some(function (ref, index) {
+					var isMatch = ref.id === reference.id;
+					if (isMatch) {
+						referenceIndex = index;
+					}
+
+					return isMatch;
+				});
+
+			return referenceIndex;
+		}
+
+		function _getAdjacent (key, isNext) {
 			var deferred = $q.defer();
+			var useCachedValues = true;
+			
+			isNext = Boolean(isNext) || false;
+
+			self.get(key, useCachedValues)
+				.then(function (current) {
+					self.getAll(useCachedValues)
+						.then(function (references) {
+							var currentIndex;
+							var adjacentIndex;
+
+							currentIndex = _getReferenceIndex(references, current);
+
+							if (typeof currentIndex === 'undefined') {
+								DataService.reject(deferred, 'no current index!');
+								return;
+							}
+
+							if (isNext) {
+								adjacentIndex = utils.array.getNextIndex(references, currentIndex);
+							}
+							else {
+								adjacentIndex = utils.array.getPreviousIndex(references, currentIndex);
+							}
+
+							_validateResponse(deferred, references[adjacentIndex], 'getNext');
+						})
+						.catch(function (err) {
+							DataService.reject(deferred, err);
+						});
+				})
+				.catch(function (err) {
+					DataService.reject(deferred, err);
+				});
+
+			return deferred.promise;
+
+		}
+
+		this.get = function (key, useCache) {
+			var deferred = $q.defer();
+
+			if (Boolean(useCache && mCache.get[key])) {
+				_validateResponse(deferred, mCache.get[key], 'get');
+			}
 
 			DataService.get(mURL + '/' + key)
 				.then(function (data) {
-					_validateResponse(deferred, data, 'get');
+					self.getAll(useCache)
+						.then(function (references) {
+							var index = _getReferenceIndex(references, data);
+							mCache.get[key] = angular.extend({
+								info: {
+									index: index,
+									totalCount: references.length
+								}
+							}, data);
+
+							_validateResponse(deferred, mCache.get[key], 'get');
+						})
+						.catch(function (err) {
+							DataService.reject(deferred, err);
+						});
 				})
 				.catch(function (err) {
 					DataService.reject(deferred, err);
 				});
 
 			return deferred.promise;
-		},
-		getAll: function (params) {
+		};
+
+		this.getAll = function (useCache) {
 			var deferred = $q.defer();
 
-			DataService.get(mURL, params)
+			if (Boolean(useCache && mCache.getAll)) {
+				_validateResponse(deferred, mCache.getAll, 'getAll');
+			}
+
+			DataService.get(mURL)
 				.then(function (data) {
-					_validateResponse(deferred, data, 'getAll');
+					mCache.getAll = data.sort(_defaultReferenceSort);
+					_validateResponse(deferred, mCache.getAll, 'getAll');
 				})
 				.catch(function (err) {
 					DataService.reject(deferred, err);
@@ -54,8 +151,9 @@ module.exports = angular.module('myApp.services.referenceService', [
 
 			return deferred.promise;
 
-		},
-		create: function (data) {
+		};
+
+		this.create = function (data) {
 			var deferred = $q.defer();
 
 			// TODO: validate data before publishing
@@ -69,8 +167,9 @@ module.exports = angular.module('myApp.services.referenceService', [
 				});
 
 			return deferred.promise;
-		},
-		update: function (key, data) {
+		};
+
+		this.update = function (key, data) {
 			var deferred = $q.defer();
 
 			// TODO: validate data before publishing
@@ -84,8 +183,9 @@ module.exports = angular.module('myApp.services.referenceService', [
 				});
 
 			return deferred.promise;
-		},
-		delete: function (key) {
+		};
+
+		this.delete = function (key) {
 			var deferred = $q.defer();
 
 			DataService.delete(mURL + '/' + key)
@@ -97,48 +197,19 @@ module.exports = angular.module('myApp.services.referenceService', [
 				});
 
 			return deferred.promise;
-		},
-		getNext: function (key) {
-			var self = this;
-			var deferred = $q.defer();
-			
-			self.get(key)
-				.then(function (current) {
-					self.getAll()
-						.then(function (references) {
-							var currentIndex;
+		};
 
-							references.some(function (ref, index) {
-								var isMatch = ref.id === current.id;
-								if (isMatch) {
-									currentIndex = index;
-								}
+		this.getPrevious = function (key) {
+			var isNext = false;
+			return _getAdjacent(key, isNext);
+		};
 
-								return isMatch
-							});
+		this.getNext = function (key) {
+			var isNext = true;
+			return _getAdjacent(key, isNext);
+		};
 
-							if (typeof currentIndex === 'undefined') {
-								DataService.reject(deferred, 'no current index!');
-								return;
-							}
+	}
 
-							var nextIndex = currentIndex + 1;
-
-							if (!references[nextIndex]) {
-								nextIndex = 0;
-							}
-
-							_validateResponse(deferred, references[nextIndex], 'getNext');
-						})
-						.catch(function (err) {
-							DataService.reject(deferred, err);
-						});
-				})
-				.catch(function (err) {
-					DataService.reject(deferred, err);
-				});
-
-			return deferred.promise;
-		}
-	};
+	return new ReferenceService();
 });

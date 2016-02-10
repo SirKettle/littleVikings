@@ -16,6 +16,7 @@
 			background-image: url('/images/quotes.png');
 			background-position: right 100px;
 			background-repeat: no-repeat;
+			pointer-events: none;
 		}
 
 
@@ -32,6 +33,7 @@
 			-webkit-transform: rotate(0.5turn);
 			transform: rotate(0.5turn);
 			background-repeat: no-repeat;
+			pointer-events: none;
 		}
 
 		img {

@@ -37,6 +37,43 @@ module.exports = angular.module('myApp.views.referenceDetail', [
 ) {
 	var ReferenceDetail = this;
 
+	function _initialise () {
+		ReferenceDetail.key = $routeParams.key;
+		_getDetails(ReferenceDetail.key);
+		_getNext(ReferenceDetail.key);
+		_getPrevious(ReferenceDetail.key);
+	}
+
+	function _getDetails (id) {
+		return ReferenceService.get(id)
+			.then(function (data) {
+				ReferenceDetail.model = data;
+			})
+			.catch(function (err) {
+				console.warn('get error', id, err);
+			});
+	}
+
+	function _getNext (id) {
+		return ReferenceService.getNext(id)
+			.then(function (data) {
+				ReferenceDetail.next = data;
+			})
+			.catch(function (err) {
+				console.warn('get next error', id, err);
+			});
+	}
+
+	function _getPrevious (id) {
+		return ReferenceService.getPrevious(id)
+			.then(function (data) {
+				ReferenceDetail.previous = data;
+			})
+			.catch(function (err) {
+				console.warn('get previous error', id, err);
+			});
+	}
+
 	ReferenceDetail.getTestimonialHtml = function () {
 		var testimonial = ReferenceDetail.model && ReferenceDetail.model.testimonial;
 
@@ -47,31 +84,13 @@ module.exports = angular.module('myApp.views.referenceDetail', [
 		return $sce.trustAsHtml(testimonial.quoteHtml);
 	};
 
-	ReferenceDetail.getDetails = function (id) {
-		return ReferenceService.get(id)
-			.then(function (data) {
-				ReferenceDetail.model = data;
-			})
-			.catch(function (err) {
-				console.warn('get error', id, err);
-			});
-	};
-
-	ReferenceDetail.getNext = function (id) {
-		return ReferenceService.getNext(id)
-			.then(function (data) {
-				ReferenceDetail.next = data;
-			})
-			.catch(function (err) {
-				console.warn('get next error', id, err);
-			});
+	ReferenceDetail.onPreviousClicked = function () {
+		$location.path('reference/' + ReferenceDetail.previous.id);
 	};
 
 	ReferenceDetail.onNextClicked = function () {
 		$location.path('reference/' + ReferenceDetail.next.id);
 	};
 
-	ReferenceDetail.key = $routeParams.key;
-	ReferenceDetail.getDetails(ReferenceDetail.key);
-	ReferenceDetail.getNext(ReferenceDetail.key);
+	_initialise();
 });
