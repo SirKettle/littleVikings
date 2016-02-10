@@ -3,7 +3,7 @@
 	<my:header></my:header>
 
 	<article>
-
+		<p><a ng:click="ReferenceDetail.onNextClicked()">Next reference</a></p>
 		<h2>{{ ReferenceDetail.model.year }}</h2>
 		<h3 ng:bind-html="ReferenceDetail.getTestimonialHtml()"></h3>
 		<h4>{{ ReferenceDetail.model.testimonial.author }}</h4>

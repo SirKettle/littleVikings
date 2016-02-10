@@ -37,8 +37,8 @@ angular.module('myApp', [
 	// handle pages / routing
 	$routeProvider
 		.when('/', { template: '<my:view-main></my:view-main>' })
-		.when('/about', { template: '<my:view-about></my:view-about>' })
-		.when('/fees', { template: '<my:view-fees></my:view-fees>' })
+		// .when('/about', { template: '<my:view-about></my:view-about>' })
+		// .when('/fees', { template: '<my:view-fees></my:view-fees>' })
 		.when('/policies', { template: '<my:view-policies></my:view-policies>' })
 		.when('/policies/:key', {
 			template: function (params) {

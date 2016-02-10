@@ -29,6 +29,7 @@ module.exports = angular.module('myApp.views.referenceDetail', [
 	};
 })
 .controller('MyViewReferenceDetailCtrl', function (
+	$location,
 	$sce,
 	$scope,
 	$routeParams,
@@ -52,10 +53,25 @@ module.exports = angular.module('myApp.views.referenceDetail', [
 				ReferenceDetail.model = data;
 			})
 			.catch(function (err) {
-				console.warn('getDetails error', id, err);
+				console.warn('get error', id, err);
 			});
+	};
+
+	ReferenceDetail.getNext = function (id) {
+		return ReferenceService.getNext(id)
+			.then(function (data) {
+				ReferenceDetail.next = data;
+			})
+			.catch(function (err) {
+				console.warn('get next error', id, err);
+			});
+	};
+
+	ReferenceDetail.onNextClicked = function () {
+		$location.path('reference/' + ReferenceDetail.next.id);
 	};
 
 	ReferenceDetail.key = $routeParams.key;
 	ReferenceDetail.getDetails(ReferenceDetail.key);
+	ReferenceDetail.getNext(ReferenceDetail.key);
 });

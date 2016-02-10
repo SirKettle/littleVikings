@@ -97,6 +97,48 @@ module.exports = angular.module('myApp.services.referenceService', [
 				});
 
 			return deferred.promise;
+		},
+		getNext: function (key) {
+			var self = this;
+			var deferred = $q.defer();
+			
+			self.get(key)
+				.then(function (current) {
+					self.getAll()
+						.then(function (references) {
+							var currentIndex;
+
+							references.some(function (ref, index) {
+								var isMatch = ref.id === current.id;
+								if (isMatch) {
+									currentIndex = index;
+								}
+
+								return isMatch
+							});
+
+							if (typeof currentIndex === 'undefined') {
+								DataService.reject(deferred, 'no current index!');
+								return;
+							}
+
+							var nextIndex = currentIndex + 1;
+
+							if (!references[nextIndex]) {
+								nextIndex = 0;
+							}
+
+							_validateResponse(deferred, references[nextIndex], 'getNext');
+						})
+						.catch(function (err) {
+							DataService.reject(deferred, err);
+						});
+				})
+				.catch(function (err) {
+					DataService.reject(deferred, err);
+				});
+
+			return deferred.promise;
 		}
 	};
 });
