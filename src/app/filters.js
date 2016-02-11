@@ -21,4 +21,25 @@ module.exports = angular.module('myApp.filters', [
 		return initials;
 
 	};
+})
+.filter('myArrayPage', function () {
+
+	return function (arrayList, args) {
+		var pageNo = args.page || 1;
+		var pageCount = args.pages || 1;
+		var pagedList = [];
+		var itemsPerPage = Math.ceil(arrayList.length/pageCount);
+
+		while (pageCount > 0) {
+			pageCount--;
+			pagedList.push(new Array());
+		}
+
+		arrayList.forEach(function (item, index) {
+			var pageIndex = Math.floor(index/itemsPerPage);
+			pagedList[pageIndex].push(item);
+		});
+
+		return pagedList[pageNo - 1];
+	};
 });

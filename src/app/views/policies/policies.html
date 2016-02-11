@@ -4,11 +4,28 @@
 
 	<article>
 		<h2>Policies...</h2>
-		<ul>
-			<li ng:repeat="policy in policies">
-				<a ng:click="_onLinkClicked(policy)">{{ policy.title }}</a>
-			</li>
-		</ul>
+		<h3>Please find below links to all of my policies</h3>
+		<p>If you have any concerns regarding any of my policies please do not hesitate to <a href="/#/contact/">contact me</a>.</p>
+		<column class="-left">
+			<ul>
+				<li ng:repeat="policy in policies | myArrayPage: {
+					page: 1,
+					pages: 2
+				}">
+					<a ng:click="_onLinkClicked(policy)">{{ policy.title }}</a>
+				</li>
+			</ul>
+		</column>
+		<column class="-right">
+			<ul>
+				<li ng:repeat="policy in policies | myArrayPage: {
+					page: 2,
+					pages: 2
+				}">
+					<a ng:click="_onLinkClicked(policy)">{{ policy.title }}</a>
+				</li>
+			</ul>
+		</column>
 	</article>
 	<my:footer></my:footer>
 </div>

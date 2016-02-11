@@ -58,6 +58,46 @@ var policies = {
 	complaints: {
 		title: 'Complaints Procedure',
 		html: require('../html/policy/complaints.html')
+	},
+	confidentiality: {
+		title: 'Confidentiality Policy',
+		html: require('../html/policy/confidentiality.html')
+	},
+	dropping_off_and_collection: {
+		title: 'Dropping Off and Collection Policy',
+		html: require('../html/policy/dropping_off_and_collection.html')
+	},
+	fire: {
+		title: 'Fire Policy',
+		html: require('../html/policy/fire.html')
+	},
+	health_and_safety: {
+		title: 'Health and Safety Policy',
+		html: require('../html/policy/health_and_safety.html')
+	},
+	healthy_eating: {
+		title: 'Healthy Eating Policy',
+		html: require('../html/policy/healthy_eating.html')
+	},
+	inclusion_and_anti_bias: {
+		title: 'Inclusion and Anti-bias Policy',
+		html: require('../html/policy/inclusion_and_anti_bias.html')
+	},
+	language: {
+		title: 'Language Policy',
+		html: require('../html/policy/language.html')
+	},
+	lost_child: {
+		title: 'Lost Child Policy',
+		html: require('../html/policy/lost_child.html')
+	},
+	managing_behaviour: {
+		title: 'Managing Behaviour Policy',
+		html: require('../html/policy/managing_behaviour.html')
+	},
+	medicine: {
+		title: 'Medicine Policy',
+		html: require('../html/policy/medicine.html')
 	}
 };
 
