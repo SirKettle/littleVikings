@@ -2,6 +2,12 @@
 
 .view-main {
 
+	> article {
+		img.piccy {
+			margin-bottom: 0;
+		}
+	}
+
 	.my-references {
 		
 		margin-bottom: $gutterSize;
