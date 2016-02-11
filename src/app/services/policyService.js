@@ -27,6 +27,38 @@ var policies = {
 		title: 'Care, Learning and Play Policy',
 		html: require('../html/policy/care_learning_and_play.html')
 	},
+	safeguarding_children: {
+		title: 'Policy for safeguarding children',
+		html: require('../html/policy/safeguarding_children.html')
+	},
+	pet: {
+		title: 'Pet and Animal Policy',
+		html: require('../html/policy/pet.html')
+	},
+	smoking: {
+		title: 'No Smoking Policy',
+		html: require('../html/policy/smoking.html')
+	},
+	nappy: {
+		title: 'Nappy and Toilet Training Policy',
+		html: require('../html/policy/nappy.html')
+	},
+	childminder_sickness: {
+		title: 'Childminder Sickness Policy',
+		html: require('../html/policy/childminder_sickness.html')
+	},
+	childminder_observation: {
+		title: 'Childminding Observation Policy',
+		html: require('../html/policy/childminder_observation.html')
+	},
+	childminding_safety_on_outings: {
+		title: 'Childminding Safety On Outings Policy',
+		html: require('../html/policy/childminding_safety_on_outings.html')
+	},
+	complaints: {
+		title: 'Complaints Procedure',
+		html: require('../html/policy/complaints.html')
+	}
 };
 
 module.exports = angular.module('myApp.services.policyService', [])
